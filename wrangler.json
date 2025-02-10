@@ -1,0 +1,25 @@
+{
+  "name": "my-worker",
+  "route": "workertest-dev.rihan.dev/*",
+  "main": "index.ts",
+  "vars": {
+    "ENVIRONMENT": "dev"
+  },
+  "compatibility_date":"2025-01-31",
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging"
+      },
+      "route": "workertest-staging.rihan.dev/*"
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      },
+      "routes": [
+        "workertest-prod.rihan.dev/*"
+      ]
+    }
+  }
+}
